@@ -36,8 +36,11 @@ Cascading Style Sheets: to describe the visual style and presentations of the co
     - Declaration or Style: e.g. `front-size: 20px;`
       - Property: e.g. `font-size`
       - Value: e.g. `20px`
+- Inline CSS: using the `style` attribute in the html code
 
 ### Good practices
+
+- Do not use Inline CSS
 
 ## Questions
 
