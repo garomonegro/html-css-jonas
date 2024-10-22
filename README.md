@@ -45,7 +45,18 @@ Cascading Style Sheets: to describe the visual style and presentations of the co
 - Element Selector: the element name
 - ID Selector: `#` as prefix of the ID name
 - Class Selector: `.` as prefix of the class name
-- Sudo Class: automatic/inferred class, e.g. `element:sudo-class`
+- Pseudo Class: automatic/inferred class, e.g. `element:pseudo-class`
+- Conflicting Selector Declarations or Selector Declaration Priority: If multiple ID/Class/Pseudo-Class/Element selectors with conflicting Declarations, the last one applies.
+  - Declarations marked `!important` have the highest priority, its used as a last resort to resolve conflicts (bad practice)
+  - Then Inline Style (bad practice)
+  - then ID. If multiple selectors with conflicting Declarations, the last one applies
+  - then class or pseudo-class. If multiple selectors with conflicting Declarations, the last one applies
+  - then element. If multiple selectors with conflicting Declarations, the last one applies
+  - lastly the universal selector
+- Universal Selector (\*):
+- Multiple Classes: `class="class-1 class-2"`
+- Important Keyword: `color: #0f0 !important;`
+- Inheritance: child Elements inherit from Parent elements declarations and these have the lowest priority. Not all declarations get inherit, mostly text related ones.
 
 ### Good practices
 
@@ -53,11 +64,11 @@ Cascading Style Sheets: to describe the visual style and presentations of the co
 - `id` or `class` instead of descendant selector with the html element
 - User `class` instead of `id` even if there is only one use of it
 - Hexadecimal for color and RGBA when transparency is needed
-- Define element `a` sudo-classes `visited`, `hover`, and `active` in that same order
+- Define element `a` pseudo-classes `visited`, `hover`, and `active` in that same order
 
 ## Notes
 
-- The browsers Developer Tool allows you to see, modify and play with the Elements, Styles, sudo-classes, etc.
+- The browsers Developer Tool allows you to see, modify and play with the Elements, Styles, pseudo-classes, etc.
 
 ## Questions
 
