@@ -23,6 +23,7 @@ HyperText Markup Language: to structure and describe the content of a webpage (n
 - `<strong>` instead of `<b>` (html 5)
 - `<em>` instead of `<i>` (html 5)
 - Always add `alt` to all images, its used by search engines to know what the image is about BUT also for screen readers used by blind people. If the image is broken the alt text is shown.
+- The first page should be called `index.html`
 
 ## CSS
 
@@ -36,11 +37,27 @@ Cascading Style Sheets: to describe the visual style and presentations of the co
     - Declaration or Style: e.g. `front-size: 20px;`
       - Property: e.g. `font-size`
       - Value: e.g. `20px`
-- Inline CSS: using the `style` attribute in the html code
+- Inline CSS: using the `style` attribute in the html code (Separation of Concern)
+- Internal CSS: `style` element instead of an attribute
+- External CSS: independent `*.css` file
+- RGB/RGBA Notation: `rgb(0,255,255)`, `rgba(0,255,255,0.3)`. The A in RGBA in Alpha or Transparency
+- Hexadecimal Notation: #00ffff, 0 to ff instead 0 to 255. Shorthand #0ff
+- Element Selector: the element name
+- ID Selector: `#` as prefix of the ID name
+- Class Selector: `.` as prefix of the class name
+- Sudo Class: automatic/inferred class, e.g. `element:sudo-class`
 
 ### Good practices
 
 - Do not use Inline CSS
+- `id` or `class` instead of descendant selector with the html element
+- User `class` instead of `id` even if there is only one use of it
+- Hexadecimal for color and RGBA when transparency is needed
+- Define element `a` sudo-classes `visited`, `hover`, and `active` in that same order
+
+## Notes
+
+- The browsers Developer Tool allows you to see, modify and play with the Elements, Styles, sudo-classes, etc.
 
 ## Questions
 
