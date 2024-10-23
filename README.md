@@ -32,11 +32,16 @@ Cascading Style Sheets: to describe the visual style and presentations of the co
 ### Concepts
 
 - CSS Rule
+
   - Selector: e.g. `h1`
   - Declaration Block: multiple Declarations contained by curly brackets
+
     - Declaration or Style: e.g. `front-size: 20px;`
       - Property: e.g. `font-size`
       - Value: e.g. `20px`
+
+    <img src="./images/css-rule.png" height="200"/>
+
 - Inline CSS: using the `style` attribute in the html code (Separation of Concern)
 - Internal CSS: `style` element instead of an attribute
 - External CSS: independent `*.css` file
@@ -57,6 +62,11 @@ Cascading Style Sheets: to describe the visual style and presentations of the co
 - Multiple Classes: `class="class-1 class-2"`
 - Important Keyword: `color: #0f0 !important;`
 - Inheritance: child Elements inherit from Parent elements declarations and these have the lowest priority. Not all declarations get inherit, mostly text related ones.
+- CSS Box Model:
+  - Final element width = left border + left padding + width + right padding + right border
+  - Final element height = top border + top padding + height + bottom padding + bottom border
+
+  <img src="./images/css-box-model.png" height="350"/>
 
 ### Good practices
 
