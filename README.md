@@ -50,8 +50,10 @@ Cascading Style Sheets: to describe the visual style and presentations of the co
 - Element Selector: the element name
 - ID Selector: `#` as prefix of the ID name
 - Class Selector: `.` as prefix of the class name
-- Pseudo Class: automatic/inferred class, e.g. `element:pseudo-class`
-- Conflicting Selector Declarations or Selector Declaration Priority: If multiple ID/Class/Pseudo-Class/Element selectors with conflicting Declarations, the last one applies.
+- Pseudo Class: automatic/inferred class, selector `:`, e.g. `element:pseudo-class`
+- Pseudo Element: selector `::`, e.g. `h1::first-letter`
+- Adjacent Sibling Selector: `+`, e.g. `h3 + p::first-line` which means that the declaration block will apply to the first line of the paragraphs that come right after a heading 3.
+- Specificity (Conflicting Selector Declarations or Selector Declaration Priority): If multiple ID/Class/Pseudo-Class/Element selectors with conflicting Declarations, the last one applies.
   - Declarations marked `!important` have the highest priority, its used as a last resort to resolve conflicts (bad practice)
   - Then Inline Style (bad practice)
   - then ID. If multiple selectors with conflicting Declarations, the last one applies
@@ -68,6 +70,13 @@ Cascading Style Sheets: to describe the visual style and presentations of the co
 
   <img src="./images/css-box-model.png" height="350"/>
 
+- Collapsing Margins: when two margins collide, only the biggest one gets applied.
+- Block-level Elements: Occupy 100% of the parent width, stacked vertically, the box model applies as described above.
+- Inline Elements: Occupies only space needed for its content, causes no line-breaks, box model applies differently (heights and widths do not apply, padding and margin are applied only horizontally). `display: inline` to transform a block-level element into an inline element.
+- Inline-block Boxes: mix of block and inline elements, does not occupy 100% of parent, occupies only space needed for content, causes no line breaks (not stacked vertically), box model applies (i.e. heights, widths, padding and margins). Images behave like this.
+- Normal Flow: default position, Element "in flow", Elements laid out according to the order in the html code. `position: relative`
+- Absolute Positioning: Removed from normal flow, Element "out of flow", does not affect surrounding elements but might overlap them, use top, bottom, lef or right to offset the element from its first relatively positioned parent element. `position: absolute`
+
 ### Good practices
 
 - Do not use Inline CSS
@@ -83,3 +92,20 @@ Cascading Style Sheets: to describe the visual style and presentations of the co
 ## Questions
 
 - Jonas said that HTML, CSS amd JS are the languages browsers accept. Are there other languages?
+
+## Reference
+
+- [Flexbox & CSS Grid](./html-css-course/final/04-CSS-Layouts)
+  - [CSS Grid](./html-css-course/final/04-CSS-Layouts/css-grid.html)
+  - [Flexbox](./html-css-course/final/04-CSS-Layouts/flexbox.html)
+- [Design](./html-css-course/final/05-Design)
+- [Components](./html-css-course/final/06-Components)
+  - [accordion](./html-css-course/final/06-Components/01-accordion.html)
+  - [carousel](./html-css-course/final/06-Components/02-carousel.html)
+  - [table](./html-css-course/final/06-Components/03-table.html)
+  - [pagination](./html-css-course/final/06-Components/04-pagination.html)
+  - [hero](./html-css-course/final/06-Components/05-hero.html)
+  - [app-layout](./html-css-course/final/06-Components/06-app-layout.html)
+- [Omnifood Basic](./html-css-course/final/07-Omnifood-Desktop)
+- [Omnifood Responsive](./html-css-course/final/08-Omnifood-Responsive/): page responsive to Small Laptops, Tablets (Landscape &  Small) and Phones.
+- [Omnifood Optimizations](./html-css-course/final/09-Omnifood-Optimizations/): Mobile Navigation, Smooth Scrolling, Sticky Navigation Bar, Performance with Lighthouse, Favicon and Meta Description, Image Optimizations, Deployment to Netlify
